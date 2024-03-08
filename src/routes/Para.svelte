@@ -6,8 +6,10 @@
     function decrement(){
         counter-=1;
     }
+    export let description;
 </script>
 <p>para from another component</p>
+<p>{description}</p>
 <div>
     <button on:click={increment}>+</button>
     <span>Count = {counter}</span>

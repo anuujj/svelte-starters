@@ -3,6 +3,7 @@
   let name = "Anuj";
   let htmlString = "this is a <em>emphasis</em> text";
   let src = "/favicon.png";
+  let description = "this is description from main page";
 </script>
 
 <h1>Welcome {name}</h1>
@@ -11,7 +12,7 @@
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
   {@html htmlString}
 </p>
-<Para/>
+<Para {description}/>
 
 <style>
   p {
