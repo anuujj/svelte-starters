@@ -12,11 +12,19 @@
 <p>
   {@html htmlString}
 </p>
+
+<select multiple bind:value= {groceryList}>
+  {#each ["tomato", "onion", "potato", "eggs", "milk", "oil"] as item}
+  <option>{item}</option>
+  {/each}
+</select>
+
 <ul>
   {#each groceryList as item (item)}
     <li>{item}</li>
   {/each}
 </ul>
+
 <Para {description} />
 
 <style>
@@ -28,5 +36,12 @@
   ul{
     list-style: none;
     padding: 1em;
+  }
+  select{
+    width: 80%;
+    height: 100px;
+  }
+  option:checked, option:focus{
+    background-color: bisque;
   }
 </style>
